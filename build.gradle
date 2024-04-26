@@ -1,6 +1,15 @@
 plugins {
 	id "base"
 	id "org.jetbrains.kotlin.jvm" apply false // https://youtrack.jetbrains.com/issue/KT-30276
+	id "org.sonarqube" version "4.4.1.3373"
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "miwaniak_spring-boot"
+    property "sonar.organization", "miwaniak"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
 }
 
 description = "Spring Boot Build"
